@@ -53,6 +53,11 @@ clean_hard () {
     echo -e "\033[0;32mHard clean done!\033[0m"
 }
 
+start_server () {
+    echo -e "\033[0;33mNow starting the server ...\033[0m"
+    ../tomcat-8.0.32/bin/catalina.sh run
+}
+
 if [[ ( "$1" == "--help" ) || ( "$1" == "" ) ]]; then
 print_help
 
@@ -68,5 +73,7 @@ elif [[ "$1" == "--clean-hard" ]]; then
 clean_soft
 clean_hard
 
+elif [[ "$1" == "--start" ]]; then
+start_server
 
 fi

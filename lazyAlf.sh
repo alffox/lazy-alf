@@ -36,7 +36,7 @@ clean_soft () {
     rm -rf ../osgi/modules/*.jar
 
     echo "Deleting the content of \$TOMCAT_HOME\work and \temp folders ..."
-    cd ../tomcat*/
+    cd ../tomcat-*/
     rm -rf work/*
     rm -rf temp/*
 
@@ -55,7 +55,7 @@ clean_hard () {
 
 start_server () {
     echo -e "\033[0;33mNow starting the server ...\033[0m"
-    ../tomcat-8.0.32/bin/catalina.sh run
+    ../tomcat-*/bin/catalina.sh run
 }
 
 if [[ ( "$1" == "--help" ) || ( "$1" == "" ) ]]; then

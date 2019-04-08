@@ -43,6 +43,16 @@ clean_soft () {
     echo -e "\033[0;32mSoft clean done!\033[0m"
 }
 
+clean_hard () {
+    echo -e "\033[0;33mStarting hard clean operation ...\033[0m"
+
+    echo "Cleaning up content of \$LIFERAY_HOME\data folder ..."
+    cd ../data/
+    find -maxdepth 1 -type d -not -name license -not -name "." -exec rm -rf {} \;
+
+    echo -e "\033[0;32mHard clean done!\033[0m"
+}
+
 if [[ ( "$1" == "--help" ) || ( "$1" == "" ) ]]; then
 print_help
 
@@ -53,5 +63,10 @@ start_server
 
 elif [[ "$1" == "--clean-soft" ]]; then
 clean_soft
+
+elif [[ "$1" == "--clean-hard" ]]; then
+clean_soft
+clean_hard
+
 
 fi

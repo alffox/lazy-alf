@@ -10,5 +10,23 @@ echo -e "\033[0;94m --start\033[0m: starts the server with ./catalina.sh run com
 echo
 }
 
+initialize () {
+    echo -e "\033[0;33mRunning auto-discovery and patching-tool info commands ...\033[0m"
+    ./patching-tool.sh auto-discovery
+    ./patching-tool.sh info
+
+    echo -e "\033[33mDone. Type the fixpack or hotfix name you want to download and hit ENTER (e.g. de-78-7010,dxp-9-7110,hotfix-120-7010). Press enter to skip\e[0m"
+    read patch_fixpack
+    ./patching-tool.sh download $patch_fixpack
+    ./patching-tool.sh install
+
+    echo -e "\033[0;32mInitialization done!\033[0m"
+}
+
 if [[ ( "$1" == "--help" ) || ( "$1" == "" ) ]]; then
 print_help
+
+elif [[ "$1" == "--init" ]]; then
+initialize
+clean_soft
+start_server

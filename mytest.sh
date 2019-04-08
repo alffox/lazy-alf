@@ -23,6 +23,26 @@ initialize () {
     echo -e "\033[0;32mInitialization done!\033[0m"
 }
 
+clean_soft () {
+    echo -e "\033[0;33mStarting soft clean operation ...\033[0m"
+    
+    echo "Deleting \$LIFERAY_HOME/work folder ..."
+    rm -rf ../work/*
+
+    echo "Deleting the content of \$LIFERAY_HOME/osgi/state folder ..."
+    rm -rf ../osgi/state/*
+
+    echo "Deleting *.jar in \$LIFERAY_HOME/osgi/modules folder ..."
+    rm -rf ../osgi/modules/*.jar
+
+    echo "Deleting the content of \$TOMCAT_HOME\work and \temp folders ..."
+    cd ../tomcat*/
+    rm -rf work/*
+    rm -rf temp/*
+
+    echo -e "\033[0;32mSoft clean done!\033[0m"
+}
+
 if [[ ( "$1" == "--help" ) || ( "$1" == "" ) ]]; then
 print_help
 
@@ -30,3 +50,8 @@ elif [[ "$1" == "--init" ]]; then
 initialize
 clean_soft
 start_server
+
+elif [[ "$1" == "--clean-soft" ]]; then
+clean_soft
+
+fi

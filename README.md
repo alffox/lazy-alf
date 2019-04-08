@@ -9,8 +9,8 @@ A script that automates common patching and cleanup operations on Liferay DXP To
 
 3) The script is ready to go. Here are all the features:
 
-| Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Actions| 
-| ------------- | ------------- | 
+|Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Action| 
+|-------------|-------------| 
 | **(no option)** or **&nbsp;--help** | prints an info message | 
 | **&nbsp;--init** | runs `./patching-tool.sh auto-discovery`, `./patching-tool.sh info`, prompts for patches to download, installs them | 
 | **&nbsp;--clean-soft** | deletes `$LIFERAY_HOME/work`, `$LIFERAY_HOME/osgi/state`, all `.jar`'s in `$LIFERAY_HOME/osgi/modules`, `$TOMCAT_HOME/work` and `$TOMCAT_HOME/temp` folders | 

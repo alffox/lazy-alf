@@ -25,7 +25,7 @@ initialize () {
     ./patching-tool.sh auto-discovery
     ./patching-tool.sh info
 
-    echo "${ORANGE}Done. Type the fixpack or hotfix name you want to download and hit ENTER (e.g. de-78-7010,dxp-9-7110,hotfix-120-7010). Press enter to skip${RESET}"
+    echo "${ORANGE}Done. Type the fixpack or hotfix name you want to download and hit ENTER \(e.g. de-78-7010,dxp-9-7110,hotfix-120-7010\). Press enter to skip${RESET}"
     read patch_fixpack
     ./patching-tool.sh download $patch_fixpack
     ./patching-tool.sh install

@@ -16,7 +16,7 @@ echo "${BLUE} --init${RESET}: runs ./patching-tool.sh auto-discovery, ./patching
 echo "${BLUE} --clean-soft${RESET}: deletes \$LIFERAY_HOME/work, \$LIFERAY_HOME/osgi/state, all .jar's in \$LIFERAY_HOME/osgi/modules, all .war's in \$LIFERAY_HOME/osgi/war, \$TOMCAT_HOME/work and \$TOMCAT_HOME/temp folders"
 echo "${BLUE} --clean-hard${RESET}: deletes everything in \$LIFERAY_HOME/data except the \"license\" folder"
 echo "${BLUE} --start${RESET}: starts the server with ./catalina.sh run command"
-echo "${BLUE} --soft-start${RESET}: executes the options ${BLUE} --clean-soft${RESET} and ${BLUE} --start${RESET} in sequence
+echo "${BLUE} --soft-start${RESET}: executes the options ${BLUE} --clean-soft${RESET} and ${BLUE} --start${RESET} in sequence"
 echo
 }
 

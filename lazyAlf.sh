@@ -75,10 +75,10 @@ initialize
 clean_soft
 start_server
 
-elif [[ "$1" == "--clean-soft" ]]; then
+elif [[ "$1" == "--soft" ]]; then
 clean_soft
 
-elif [[ "$1" == "--clean-hard" ]]; then
+elif [[ "$1" == "--hard" ]]; then
 clean_soft
 clean_hard
 

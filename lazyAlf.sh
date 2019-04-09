@@ -13,7 +13,7 @@ print_help () {
 echo "${BOLD_CYAN}lazyAlf for DXP - Usage & Info:\n\n"
 echo "${BLUE}no option${RESET} or ${BLUE}--help${RESET}: prints this info message"
 echo "${BLUE} --init${RESET}: runs ./patching-tool.sh auto-discovery, ./patching-tool.sh info, prompts for patches to download, installs them"
-echo "${BLUE} --clean-soft${RESET}: deletes \$LIFERAY_HOME/work, \$LIFERAY_HOME/osgi/state, all .jars in \$LIFERAY_HOME/osgi/modules, \$TOMCAT_HOME/work and \$TOMCAT_HOME/temp folders"
+echo "${BLUE} --clean-soft${RESET}: deletes \$LIFERAY_HOME/work, \$LIFERAY_HOME/osgi/state, all .jar's in \$LIFERAY_HOME/osgi/modules, all .war's in \$LIFERAY_HOME/osgi/war, \$TOMCAT_HOME/work and \$TOMCAT_HOME/temp folders"
 echo "${BLUE} --clean-hard${RESET}: deletes everything in \$LIFERAY_HOME/data except the \"license\" folder"
 echo "${BLUE} --start${RESET}: starts the server with ./catalina.sh run command"
 echo "${BLUE} --soft-start${RESET}: executes the options ${BLUE} --clean-soft${RESET} and ${BLUE} --start${RESET} in sequence
@@ -44,6 +44,9 @@ clean_soft () {
 
     echo "Deleting *.jar in \$LIFERAY_HOME/osgi/modules folder ..."
     rm -rf ../osgi/modules/*.jar
+
+    echo "Deleting *.war in \$LIFERAY_HOME/osgi/war folder ..."
+    rm -rf ../osgi/modules/*.war
 
     echo "Deleting the content of \$TOMCAT_HOME\work and \temp folders ..."
     cd ../tomcat*/

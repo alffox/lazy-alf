@@ -73,25 +73,25 @@ start_server () {
 }
 
 if [[ ( "$1" == "--help" ) || ( "$1" == "" ) ]]; then
-print_help
+    print_help
 
 elif [[ "$1" == "--init" ]]; then
-initialize
-clean_soft
-start_server
+    initialize
+    clean_soft
+    start_server
 
 elif [[ "$1" == "--soft" ]]; then
-clean_soft
+    clean_soft
 
 elif [[ "$1" == "--hard" ]]; then
-clean_soft
-clean_hard
+    clean_soft
+    clean_hard
 
 elif [[ "$1" == "--start" ]]; then
-start_server
+    start_server
 
 elif [[ "$1" == "--soft-start" ]]; then
-clean_soft
-start_server
+    clean_soft
+    start_server
 
 fi

@@ -10,7 +10,8 @@ GREEN=$(echo -en '\033[0;32m')
 
 
 print_help () {
-echo "${BOLD_CYAN}lazyAlf for DXP - Usage & Info:\n\n"
+echo "${BOLD_CYAN}lazyAlf for DXP - Usage & Info:"
+echo
 echo "${BLUE}no option${RESET} or ${BLUE}--help${RESET}: prints this info message"
 echo "${BLUE} --init${RESET}: runs ./patching-tool.sh auto-discovery, ./patching-tool.sh info, prompts for patches to download, installs them"
 echo "${BLUE} --clean-soft${RESET}: deletes \$LIFERAY_HOME/work, \$LIFERAY_HOME/osgi/state, all .jar's in \$LIFERAY_HOME/osgi/modules, all .war's in \$LIFERAY_HOME/osgi/war, \$TOMCAT_HOME/work and \$TOMCAT_HOME/temp folders"
@@ -25,7 +26,7 @@ initialize () {
     ./patching-tool.sh auto-discovery
     ./patching-tool.sh info
 
-    echo "${ORANGE}Done. Type the fixpack or hotfix name you want to download and hit ENTER \(e.g. de-78-7010,dxp-9-7110,hotfix-120-7010\). Press enter to skip${RESET}"
+    echo "${ORANGE}Done. Type the fixpack or hotfix name you want to download and hit ENTER (e.g. de-78-7010,dxp-9-7110,hotfix-120-7010). Press enter to skip${RESET}"
     read patch_fixpack
     ./patching-tool.sh download $patch_fixpack
     ./patching-tool.sh install

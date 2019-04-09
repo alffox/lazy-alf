@@ -17,4 +17,4 @@ A script that automates common patching and cleanup operations on Liferay DXP To
 * **&nbsp;--soft-start**: executes the options **&nbsp;--clean-soft** and **&nbsp;--start** in sequence
 
 ## Compatibility
-Linux OS
+Linux OS, MacOS

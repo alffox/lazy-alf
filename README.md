@@ -4,7 +4,7 @@ A script that automates common patching and cleanup operations on Liferay DXP To
 
 ## Requirements
 - Liferay EE 6.2+ Tomcat bundle
-- Patching Tool 2.0.12+ version. To download it: click [here](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191019&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191066)
+- Patching Tool 2.0.12+ version. To download it: click [here](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191019&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191066) (Liferay Enterprise Customers only)
 - For the download through terminal function: Liferay.com employee credentials
 
 ## Usage

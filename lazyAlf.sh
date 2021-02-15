@@ -15,9 +15,9 @@ print_help () {
     echo "Requirements: Patching Tool 2.0.12+"
     echo
     echo "${BLUE}no option${RESET} or ${BLUE}--help${RESET}: prints this info message"
-    echo "${BLUE} --quickstart${RESET}: runs ./patching-tool.sh auto-discovery automatically if Patching Tool is not configured, runs ./patching-tool.sh info, installs patches, deletes \$LIFERAY_HOME/work, \$LIFERAY_HOME/osgi/state, all .jar's in \$LIFERAY_HOME/osgi/modules, all .war's in \$LIFERAY_HOME/osgi/war, \$TOMCAT_HOME/work and \$TOMCAT_HOME/temp folders, starts the server"
+    echo "${BLUE} --quickstart${RESET}: runs ./patching-tool.sh auto-discovery automatically if Patching Tool is not configured, runs ./patching-tool.sh info, installs patches, deletes \$LIFERAY_HOME/work, \$LIFERAY_HOME/osgi/state, \$TOMCAT_HOME/work and \$TOMCAT_HOME/temp folders, starts the server"
     echo "${BLUE} --init${RESET}: runs ./patching-tool.sh auto-discovery automatically if Patching Tool is not configured, ./patching-tool.sh info, prompts for patches to download, installs them"
-    echo "${BLUE} --soft${RESET}: deletes \$LIFERAY_HOME/work, \$LIFERAY_HOME/osgi/state, all .jar's in \$LIFERAY_HOME/osgi/modules, all .war's in \$LIFERAY_HOME/osgi/war, \$TOMCAT_HOME/work and \$TOMCAT_HOME/temp folders"
+    echo "${BLUE} --soft${RESET}: deletes \$LIFERAY_HOME/work, \$LIFERAY_HOME/osgi/state, \$TOMCAT_HOME/work and \$TOMCAT_HOME/temp folders"
     echo "${BLUE} --hard${RESET}: deletes everything in \$LIFERAY_HOME/data except the \"license\" folder"
     echo "${BLUE} --start${RESET}: starts the server with ./catalina.sh run command"
     echo
@@ -46,12 +46,6 @@ clean_soft () {
     
     echo "Deleting the content of \$LIFERAY_HOME/osgi/state folder ..."
     rm -rf ../osgi/state/*
-    
-    echo "Deleting *.jar in \$LIFERAY_HOME/osgi/modules folder ..."
-    rm -rf ../osgi/modules/*.jar
-    
-    echo "Deleting *.war in \$LIFERAY_HOME/osgi/war folder ..."
-    rm -rf ../osgi/modules/*.war
     
     echo "Deleting the content of \$TOMCAT_HOME\work and \temp folders ..."
     cd ../tomcat*/
